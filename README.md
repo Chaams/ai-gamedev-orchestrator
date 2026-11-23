@@ -18,6 +18,21 @@ brief ─► generate (Blender, via MCP) ─► validate ──ok──► impor
 Le graphe ne dépend que de l'interface `GameTools` : `McpTools` parle vraiment MCP (client stdio) ;
 les tests utilisent des outils factices.
 
+## Démo (exécution réelle)
+
+```text
+$ python -m src.run --kind barrel --name "oil barrel" --profile mobile --project Jeu.uproject
+SM_OilBarrel : importé dans Unreal (/Game/Props/SM_OilBarrel.SM_OilBarrel) après 2 tentative(s).
+(durée : 64 s — Blender 4.1 + Unreal Engine 5.4, via MCP)
+```
+
+Le nom « oil barrel » est refusé par la validation (préfixe manquant), corrigé automatiquement en `SM_OilBarrel`,
+régénéré par Blender, puis importé par Unreal. L'asset obtenu, rendu par `render_turntable` :
+
+![SM_OilBarrel, généré par Blender puis importé dans Unreal](docs/demo-turntable.gif)
+
+*Unreal tourne sans affichage (`-nullrhi`) : la preuve de l'import est le journal ci-dessus (`docs/demo-run.txt`), pas une capture de l'éditeur.*
+
 ## Utiliser
 
 ```bash

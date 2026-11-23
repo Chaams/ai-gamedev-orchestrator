@@ -1,0 +1,3 @@
+$ python -m src.run --kind barrel --name "oil barrel" --profile mobile --project Jeu.uproject
+SM_OilBarrel : importé dans Unreal (/Game/Props/SM_OilBarrel.SM_OilBarrel) après 2 tentative(s).
+(durée : 64 s — Blender 4.1 + Unreal Engine 5.4, via MCP)
